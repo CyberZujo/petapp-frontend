@@ -1,5 +1,5 @@
-import React, {useState, FormEvent } from 'react';
-import axios from 'axios';
+import React, {useState, type FormEvent } from 'react';
+// import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/pets-svgrepo-com.svg';
 
