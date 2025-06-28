@@ -35,7 +35,7 @@ function App() {
   return (
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<PetList pets={pets}/>} />
 
             <Route path="/pets" element={<PetList pets={pets}/>}/>
 
