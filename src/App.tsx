@@ -10,20 +10,20 @@ import bellaUrl from './assets/bella.jpg';
 import rexUrl from './assets/rex.jpg';
 import pexelsUrl from './assets/pexels.jpg';
 
-const PrivateLayout: React.FC = () => {
-  const { isAuthenticated } = useContext(AuthContext);
-  if (!isAuthenticated) {
-    return <Navigate to="/" replace />;
-  }
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1">
-        <Outlet />
-      </main>
-    </div>
-  );
-};
+// const PrivateLayout: React.FC = () => {
+//   const { isAuthenticated } = useContext(AuthContext);
+//   if (!isAuthenticated) {
+//     return <Navigate to="/" replace />;
+//   }
+//   return (
+//     <div className="min-h-screen flex flex-col">
+//       <Navbar />
+//       <main className="flex-1">
+//         <Outlet />
+//       </main>
+//     </div>
+//   );
+// };
 
 function App() {
   const pets: Pet[] = [
@@ -33,19 +33,15 @@ function App() {
 
   ]
   return (
-    <AuthProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
 
-          <Route element={<PrivateLayout />}>
             <Route path="/pets" element={<PetList pets={pets}/>}/>
-          </Route>
 
           <Route path="*" element={<Navigate to="/login" replace />}/>
         </Routes>
       </BrowserRouter>
-    </AuthProvider>
 
   )
 }

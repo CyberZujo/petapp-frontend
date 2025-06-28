@@ -1,7 +1,7 @@
 {
   "name": "petapp-frontend",
   "private": true,
-  "homepage": "https://cyberzujo.github.io/petapp-frontend",
+  "homepage": "https://cyberzujo.github.io/petapp-frontend/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
